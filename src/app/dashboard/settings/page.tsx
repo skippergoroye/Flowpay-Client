@@ -8,7 +8,19 @@ import { useAppSelector } from '@/store/hooks';
 import { User, Phone, Mail, Shield } from 'lucide-react';
 
 export default function SettingsPage() {
+  // ✅ Get user directly from Redux state
   const user = useAppSelector((state) => state.auth.user);
+
+  console.log('User data:', user);
+
+  // If user is not yet loaded (e.g., async fetch), handle it gracefully
+  if (!user) {
+    return (
+      <div className="flex items-center justify-center h-64 text-muted-foreground">
+        Loading user data...
+      </div>
+    );
+  }
 
   return (
     <div className="max-w-4xl mx-auto space-y-6">
@@ -19,6 +31,7 @@ export default function SettingsPage() {
         </p>
       </div>
 
+      {/* Profile Information */}
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
@@ -29,15 +42,16 @@ export default function SettingsPage() {
             View and update your personal information
           </CardDescription>
         </CardHeader>
+
         <CardContent className="space-y-4">
           <div className="grid grid-cols-2 gap-4">
             <div className="space-y-2">
               <Label>First Name</Label>
-              <Input value={user?.firstName} disabled />
+              <Input value={user.firstName || ''} disabled />
             </div>
             <div className="space-y-2">
               <Label>Last Name</Label>
-              <Input value={user?.lastName} disabled />
+              <Input value={user.lastName || ''} disabled />
             </div>
           </div>
 
@@ -46,7 +60,7 @@ export default function SettingsPage() {
               <Mail className="h-4 w-4" />
               Email Address
             </Label>
-            <Input value={user?.email} disabled />
+            <Input value={user.email || ''} disabled />
           </div>
 
           <div className="space-y-2">
@@ -54,11 +68,12 @@ export default function SettingsPage() {
               <Phone className="h-4 w-4" />
               Phone Number
             </Label>
-            <Input value={user?.phoneNumber} disabled />
+            <Input value={user.phoneNumber || ''} disabled />
           </div>
         </CardContent>
       </Card>
 
+      {/* Security */}
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
@@ -75,6 +90,7 @@ export default function SettingsPage() {
         </CardContent>
       </Card>
 
+      {/* Danger Zone */}
       <Card className="border-destructive">
         <CardHeader>
           <CardTitle className="text-destructive">Danger Zone</CardTitle>
