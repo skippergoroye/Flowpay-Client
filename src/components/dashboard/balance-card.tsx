@@ -11,7 +11,7 @@ export function BalanceCard() {
   const { data: stats, isLoading: statsLoading } = useGetTransactionStatsQuery();
 
   return (
-    <Card className="bg-gradient-to-br from-primary to-purple-600 text-white border-0">
+    <Card className="bg-gradient-to-br from-primary to-blue-600 text-white border-0">
       <CardHeader>
         <CardTitle className="flex items-center gap-2 text-white">
           <Wallet className="h-5 w-5" />

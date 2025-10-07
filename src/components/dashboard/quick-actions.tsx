@@ -44,7 +44,7 @@ export function QuickActions() {
               </div>
               <div className="text-left">
                 <div className="font-semibold">{action.title}</div>
-                <div className="text-sm text-muted-foreground">
+                <div className="text-xs">
                   {action.description}
                 </div>
               </div>
