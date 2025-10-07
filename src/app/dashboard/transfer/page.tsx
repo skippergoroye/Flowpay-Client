@@ -49,7 +49,11 @@ export default function TransferPage() {
   return (
     <div className="max-w-2xl mx-auto space-y-6">
       <div>
-        <h1 className="text-3xl font-bold">Send Money</h1>
+        <div className="flex items-center gap-3 mt-4">
+          <h1 className="text-3xl font-bold">Send Money</h1> <span className='text-blue-500 text-3xl font-bold'>Flow Pay TO Flow Pay</span>
+
+        </div>
+        
         <p className="text-muted-foreground">
           Transfer money to other FlowPay users instantly
         </p>
