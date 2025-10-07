@@ -1,3 +1,4 @@
+// src/components/dashboard/quick-actions.tsx
 'use client';
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -44,7 +45,7 @@ export function QuickActions() {
               </div>
               <div className="text-left">
                 <div className="font-semibold">{action.title}</div>
-                <div className="text-xs">
+                <div className="text-sm text-white">
                   {action.description}
                 </div>
               </div>

@@ -1,3 +1,4 @@
+// src/components/dashboard/header.tsx
 'use client';
 
 import { useAppSelector } from '@/store/hooks';

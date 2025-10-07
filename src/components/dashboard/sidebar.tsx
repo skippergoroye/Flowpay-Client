@@ -1,3 +1,4 @@
+// src/components/dashboard/sidebar.tsx
 'use client';
 
 import Link from 'next/link';
@@ -11,7 +12,8 @@ import {
   CreditCard,
   Settings,
   LogOut,
-  Wallet
+  Wallet,
+  Building2
 } from 'lucide-react';
 import { useAppDispatch } from '@/store/hooks';
 import { logout } from '@/store/slices/authSlice';
@@ -21,6 +23,7 @@ const navigation = [
   { name: 'Transfer', href: '/dashboard/transfer', icon: ArrowLeftRight },
   { name: 'Transactions', href: '/dashboard/transactions', icon: History },
   { name: 'Fund Wallet', href: '/dashboard/fund', icon: CreditCard },
+  { name: 'Withdraw', href: '/dashboard/withdraw', icon: Building2 },
   { name: 'Settings', href: '/dashboard/settings', icon: Settings },
 ];
 
