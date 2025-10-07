@@ -50,7 +50,7 @@ export default function TransferPage() {
     <div className="max-w-2xl mx-auto space-y-6">
       <div>
         <div className="flex items-center gap-3 mt-4">
-          <h1 className="text-3xl font-bold">Send Money</h1> <span className='text-blue-500 text-3xl font-bold'>Flow Pay TO Flow Pay</span>
+          <h1 className="text-3xl font-bold">Send Money</h1> <span className='text-blue-500 text-3xl font-bold'>Flow Pay To Flow Pay</span>
 
         </div>
         
