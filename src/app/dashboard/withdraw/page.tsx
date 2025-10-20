@@ -110,7 +110,7 @@ export default function WithdrawPage() {
       </div>
 
       {/* Test Mode Warning */}
-      <Alert className="border-yellow-200 bg-yellow-50">
+      {/* <Alert className="border-yellow-200 bg-yellow-50">
         <AlertCircle className="h-4 w-4 text-yellow-600" />
         <AlertTitle className="text-yellow-800 font-semibold">Test Mode - Limited Account Resolution</AlertTitle>
         <AlertDescription className="text-yellow-700 text-sm">
@@ -136,7 +136,7 @@ export default function WithdrawPage() {
             </a>
           </p>
         </AlertDescription>
-      </Alert>
+      </Alert> */}
 
       {/* Available Balance */}
       <Card>
@@ -340,7 +340,7 @@ export default function WithdrawPage() {
           </CardContent>
         </Card>
 
-        <Card className="bg-amber-50 border-amber-200">
+        {/* <Card className="bg-amber-50 border-amber-200">
           <CardContent className="pt-6">
             <div className="flex gap-3">
               <AlertCircle className="h-5 w-5 text-amber-600 flex-shrink-0 mt-0.5" />
@@ -366,7 +366,7 @@ export default function WithdrawPage() {
               </div>
             </div>
           </CardContent>
-        </Card>
+        </Card> */}
       </div>
     </div>
   );

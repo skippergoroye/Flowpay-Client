@@ -22,7 +22,7 @@ export function QuickActions() {
       description: 'Add money via card',
       icon: Plus,
       href: '/dashboard/fund',
-      variant: 'secondary' as const,
+      variant: 'destructive' as const,
     },
   ];
 
@@ -40,10 +40,10 @@ export function QuickActions() {
             onClick={() => router.push(action.href)}
           >
             <div className="flex items-center gap-4 w-full">
-              <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center">
+              <div className="h-10 w-10 rounded-full bg-primary/10  flex items-center justify-center">
                 <action.icon className="h-5 w-5" />
               </div>
-              <div className="text-left">
+              <div className="text-left b ">
                 <div className="font-semibold">{action.title}</div>
                 <div className="text-sm text-white">
                   {action.description}
